@@ -21,7 +21,7 @@ node {
       if(env.BRANCH_NAME == 'master'){
         sh 'docker pull chandankashyap2310/nodetest'
         sh 'docker run -d -p 8090:8090 --name app chandankashyap2310/nodetest:latest'
-        sh 'docker rmi -f app localhost:5000/app'
+        sh 'docker rmi -f app chandankashyap2310/nodetest'
       }
     }
   }
