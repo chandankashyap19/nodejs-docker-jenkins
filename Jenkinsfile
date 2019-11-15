@@ -13,6 +13,7 @@ node {
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t app --no-cache .'
         sh 'docker tag app chandankashyap2310/nodetest'
+        sh 'docker login --username=chandankashyap2310 --password=Hrhk@1234'
         sh 'docker push chandankashyap2310/nodetest'
       }
     }
