@@ -23,6 +23,7 @@ node {
         sh 'docker run -d -p 8090:8090 --name app chandankashyap2310/nodetest:latest'
         sh 'docker stop app'
         sh 'docker rmi -f $(docker images -a -q)'
+        sh 'docker rm -f $(docker ps -a -q)'
       }
     }
   }
